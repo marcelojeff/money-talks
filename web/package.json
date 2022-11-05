@@ -8,8 +8,16 @@
   },
   "dependencies": {
     "express": "^4.17.2",
-    "redis": "3.1.2"
+    "npm": "^8.19.2",
+    "redis": "3.1.2",
+    "start": "^5.1.0"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "nodemonConfig": {
+    "legacyWatch": true
+  }
 }
