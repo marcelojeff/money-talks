@@ -8,6 +8,10 @@ services:
     restart: on-failure
     hostname: web1
     command:  /usr/src/app/node_modules/.bin/nodemon server.js
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PW}
+      - POSTGRES_DB=${POSTGRES_DB}
     ports:
       - '81:5000'
     volumes:
