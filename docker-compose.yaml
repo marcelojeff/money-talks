@@ -10,9 +10,12 @@ services:
     hostname: web1
     command:  /usr/src/app/node_modules/.bin/nodemon server.js
     environment:
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PW}
-      - POSTGRES_DB=${POSTGRES_DB}
+      - DB_USERNAME=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PW}
+      - DB_DBNAME=${POSTGRES_DB}
+      - DB_HOST=${POSTGRES_HOST}
+      - DB_PORT=${POSTGRES_PORT}
+      - DB_DIALECT=${DB_DIALECT}
     ports:
       - '81:5000'
     volumes:
